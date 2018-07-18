@@ -1,5 +1,5 @@
 import React from 'react';
-import StoreItem from './StoreItem/StoreItem'
+import StoreItem from './StoreItem/StoreItem';
 
 const storeItems = (props) =>{
     return (
