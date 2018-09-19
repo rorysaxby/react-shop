@@ -8,7 +8,6 @@ class Header extends Component {
             <Div>
                 <header className="header">
                     <div className="wrap">
-                        <h1>React Shop</h1>
                         <Navigation/>
                     </div>
                 </header>

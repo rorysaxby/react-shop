@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Accordions from '../Accordion/Accordions';
+import Accordion from '../Accordion/Accordion';
 import Div from '../../hoc/Div';
 
 class TeamConstructor extends Component{
@@ -14,41 +16,46 @@ class TeamConstructor extends Component{
     render(){
         return (
             <Div>
-                <div className="page-intro">
-                    <h2>Build your team structure (coming soon)</h2>
-                </div>
-                <div className="team-list">
-                    <div className="wrap">
-                        <div className="team-box">
-                            <div className="team-detail">
-                                <h2>Team title</h2>
-                                <p>Overseeing and building the company</p>
-                            </div>
-                            <div className="team-list">
-                                <ul>
-                                    <li>
-                                        <div className="team-card">
-                                            <h3>Richard Hendricks</h3>
-                                            <p>Position: CEO</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="team-card">
-                                            <h3>Big Head</h3>
-                                            <p>Position: Some guy</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="team-card">
-                                            <h3>Erlich Bachman</h3>
-                                            <p>Position: Chief Advisor</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <Accordions buttonClassActive="active" viewContainerClassActive="active">
+                    <Accordion buttonClassContainer="button-container" buttonClass="button" buttonName="Example Accordion 1">
+                        <h3>Accordion 1</h3>
+                    </Accordion>
+                    <Accordion buttonClassContainer="button-container" buttonClass="button" buttonName="Example Accordion 2">
+                        <h3>Accordion 2</h3>
+                    </Accordion>
+                </Accordions>
+
+                {/* <Accordion toggleFn={this.toggleAccordion} buttonClassContainer="button-container" buttonClass="button" buttonClassActive="" buttonName="Example Accordion" viewContainerActiveClass="">
+                    <p>Here is some example content</p>
+                </Accordion>
+                <Accordion toggleFn={this.toggleAccordion} buttonClassContainer="button-container" buttonClass="button" buttonClassActive="" buttonName="Example Accordion" viewContainerActiveClass="">
+                    <p>Here is some example content</p>
+                </Accordion> */}
+                
+                {/* <Accordion>
+                    <div label='Alligator Mississippiensis'>
+                    <p>
+                        <strong>Common Name:</strong> American Alligator
+                    </p>
+                    <p>
+                        <strong>Distribution:</strong> Texas to North Carolina, US
+                    </p>
+                    <p>
+                        <strong>Endangered Status:</strong> Currently Not Endangered
+                    </p>
                     </div>
-                </div>
+                    <div label='Alligator Sinensis'>
+                    <p>
+                        <strong>Common Name:</strong> Chinese Alligator
+                    </p>
+                    <p>
+                        <strong>Distribution:</strong> Eastern China
+                    </p>
+                    <p>
+                        <strong>Endangered Status:</strong> Critically Endangered
+                    </p>
+                    </div>
+                </Accordion> */}
             </Div>
         )
     }
